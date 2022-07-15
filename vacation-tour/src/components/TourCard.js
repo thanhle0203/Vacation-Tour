@@ -1,5 +1,5 @@
 import React from 'react';
-import { Paper, Grid } from '@mui/material';
+import { Paper, Grid, Typography } from '@mui/material';
 import yosemity from '../images/yosemity.png';
 
 const TourCard = () => {
@@ -10,6 +10,10 @@ const TourCard = () => {
           alt=''
           className='img'
         />
+
+        <Typography variant='subtitle1' component='h2'>
+          Camping with Nature
+        </Typography>
       </Paper>
     </Grid>
   )
