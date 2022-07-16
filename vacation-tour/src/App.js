@@ -1,18 +1,36 @@
 import './App.css';
 import TourCard from './components/TourCard';
-import { Grid, Container } from '@mui/material';
-
+import { Grid, Container, Typography } from '@mui/material';
+import SearchAppBar from './components/AppBar';
+import { margin } from '@mui/system';
+import cities from './data.json';
 
 function App() {
   return (
     <div className="App">
-      <Container>
-        <Grid container spacing={5}>
-          <TourCard />
-          <TourCard />
-          <TourCard />
-          <TourCard />
-        </Grid>
+      <SearchAppBar />
+      <Container sx={{marginY: 5}}>
+        {cities.map((city) => (
+          <>
+            <Typography
+              variant='h4'
+              component='h2'
+              marginTop={5}
+              marginBottom={3}
+            >
+              Top {city.name} Tours
+            </Typography>
+
+            <Grid container spacing={5}>
+              {city.tours.map((tour, index) => (
+                <TourCard tour={tour} key={index} />
+              ))}
+            </Grid>
+          </>
+          
+        ))}
+
+
       </Container>
     </div>
   );
