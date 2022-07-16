@@ -1,6 +1,7 @@
 import React from 'react'
 import { Typography, Container, Box, ImageList } from '@mui/material'
 import ImageLists from '../components/ImageLists'
+import CustomizedAccordions from '../components/Accordian'
 
 
 const Tour = () => {
@@ -17,6 +18,18 @@ const Tour = () => {
           height={325}
         />
         <ImageLists />
+      </Box>
+
+      <Box>
+        <Typography variant='h6' component='h4' marginTop={3}>About this ticket</Typography>
+        <Typography variant='paragraph' component='p' marginTop={3}>
+          Las Vegas is known as the Entertainment Capital of the World, and it’s easy to see why. Whether you’re visiting today, next week, next month, or even next year, there’s guaranteed to be an almost-endless variety of events and entertainment to enjoy. Pick your poison: Concerts? Comedy? Magic? Dancing? Better than Broadway shows? Yep, we’ve got all that and much more.
+        </Typography>
+      </Box>
+
+      <Box>
+        <Typography variant='h6' component='h4' marginTop={3} marginBottom={2}>Frequently Asked Questions</Typography>
+        <CustomizedAccordions />
       </Box>
     </Container>
   )
