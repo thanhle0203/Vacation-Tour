@@ -1,6 +1,7 @@
 import React from 'react';
-import { Paper, Grid, Typography } from '@mui/material';
+import { Paper, Grid, Typography, Box } from '@mui/material';
 import yosemity from '../images/yosemity.png';
+import { AccessTime } from '@mui/icons-material';
 
 const TourCard = () => {
   return (
@@ -10,10 +11,24 @@ const TourCard = () => {
           alt=''
           className='img'
         />
+        <Box paddingX={1}>
+          <Typography variant='subtitle1' component='h2'>
+            Camping with Nature
+          </Typography>
+        </Box>
 
-        <Typography variant='subtitle1' component='h2'>
-          Camping with Nature
-        </Typography>
+        <Box
+          sx={{
+            display: 'flex',
+            alignItems: 'center'
+          }}
+        >
+          <AccessTime sx={{width: 12.5}} />
+          <Typography variant='body2' component='p' marginLeft={0.5}>
+            5 hours
+          </Typography>
+        </Box>
+        
       </Paper>
     </Grid>
   )
