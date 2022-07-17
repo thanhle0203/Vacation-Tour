@@ -1,7 +1,8 @@
 import React from 'react'
-import { Typography, Container, Box, ImageList } from '@mui/material'
+import {Paper, BottomNavigation, Typography, Container, Box, ImageList } from '@mui/material'
 import ImageLists from '../components/ImageLists'
 import CustomizedAccordions from '../components/Accordian'
+import BasicModal from '../components/Modal'
 
 
 const Tour = () => {
@@ -27,10 +28,17 @@ const Tour = () => {
         </Typography>
       </Box>
 
-      <Box>
+      <Box marginBottom={10}>
         <Typography variant='h6' component='h4' marginTop={3} marginBottom={2}>Frequently Asked Questions</Typography>
         <CustomizedAccordions />
       </Box>
+
+      <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={3}>
+        <BottomNavigation >
+          <BasicModal />
+        </BottomNavigation>
+      </Paper>
+
     </Container>
   )
 }
